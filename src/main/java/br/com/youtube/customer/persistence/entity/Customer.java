@@ -25,9 +25,6 @@ public class Customer {
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    @Column(name = "birthdate")
-    private LocalDate birthDate;
-
     public <R> R map(Function<Customer, R> func) {
         return func.apply(this);
     }
@@ -54,5 +51,21 @@ public class Customer {
 
     public void setDocument(String document) {
         this.document = document;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }
